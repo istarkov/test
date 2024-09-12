@@ -84,20 +84,145 @@
   </section>
 
   <!-- About Section -->
-  <section class="py-12 bg-white">
+  <section id="about" class="py-12 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center text-gray-800">About Us</h2>
-      <p class="mt-4 text-gray-600 text-center">
+      <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
         My School is dedicated to providing the best education for our students. Our mission is to foster a community of learners who are prepared to thrive in a global society.
       </p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Features Section -->
+  <section id="features" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800">Our Features</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="text-center">
+          <svg class="mx-auto h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 6V4m0 0L8 8m4-4l4 4M6 12H4m0 0l4-4m-4 4l4 4m10-4h2m0 0l-4-4m4 4l-4 4M12 18v2m0 0l4-4m-4 4l-4-4" />
+          </svg>
+          <h3 class="mt-4 text-xl font-semibold text-gray-800">Innovative Curriculum</h3>
+          <p class="mt-2 text-gray-600">Our curriculum is designed to engage and inspire students.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="text-center">
+          <svg class="mx-auto h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 8c-3.866 0-7 2.239-7 5v1h14v-1c0-2.761-3.134-5-7-5z" />
+            <path d="M5 16v2a7 7 0 0014 0v-2" />
+          </svg>
+          <h3 class="mt-4 text-xl font-semibold text-gray-800">Expert Teachers</h3>
+          <p class="mt-2 text-gray-600">Learn from qualified and passionate educators.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="text-center">
+          <svg class="mx-auto h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M8 12h8m-4-4v8m-7 4h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
+          </svg>
+          <h3 class="mt-4 text-xl font-semibold text-gray-800">Modern Facilities</h3>
+          <p class="mt-2 text-gray-600">State-of-the-art facilities for optimal learning experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800">What Our Students Say</h2>
+      <div class="mt-8 space-y-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-100 p-6 rounded shadow-md">
+          <p class="text-gray-600">"My School has provided me with opportunities I never thought possible. The teachers genuinely care about my success."</p>
+          <div class="mt-4 flex items-center">
+            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student 1">
+            <div class="ml-4">
+              <p class="text-gray-800 font-semibold">Jane Doe</p>
+              <p class="text-gray-600 text-sm">Student, Class of 2023</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-100 p-6 rounded shadow-md">
+          <p class="text-gray-600">"The innovative curriculum keeps me engaged and excited to learn every day."</p>
+          <div class="mt-4 flex items-center">
+            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Student 2">
+            <div class="ml-4">
+              <p class="text-gray-800 font-semibold">John Smith</p>
+              <p class="text-gray-600 text-sm">Student, Class of 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-12 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-white">Ready to Join Us?</h2>
+      <p class="mt-4 text-blue-100">Take the first step towards an exceptional education experience.</p>
+      <a href="#contact" class="mt-6 inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded hover:bg-gray-200">Contact Admissions</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800">Get in Touch</h2>
+      <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
+        Have questions or want to schedule a visit? Fill out the form below, and we'll get back to you shortly.
+      </p>
+      <div class="mt-8 max-w-md mx-auto">
+        <form action="#" method="POST" class="space-y-6">
+          <div>
+            <label class="block text-gray-700">Name</label>
+            <input type="text" name="name" class="w-full mt-2 p-3 border rounded focus:outline-none focus:ring focus:border-blue-300" required>
+          </div>
+          <div>
+            <label class="block text-gray-700">Email</label>
+            <input type="email" name="email" class="w-full mt-2 p-3 border rounded focus:outline-none focus:ring focus:border-blue-300" required>
+          </div>
+          <div>
+            <label class="block text-gray-700">Message</label>
+            <textarea name="message" rows="5" class="w-full mt-2 p-3 border rounded focus:outline-none focus:ring focus:border-blue-300" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-500">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updated Footer -->
   <footer class="bg-gray-800">
-    <div class="container mx-auto px-6 py-4">
-      <div class="text-center text-gray-300">
-        &copy; 2023 My School. All rights reserved.
+    <div class="container mx-auto px-6 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="text-gray-300 text-center md:text-left">
+          &copy; 2023 My School. All rights reserved.
+        </div>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="text-gray-300 hover:text-white">
+            <!-- Facebook Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5.005 3.664 9.128 8.438 9.877v-6.987H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.772-1.63 1.562v1.882h2.773l-.443 2.89h-2.33V22C18.336 21.128 22 17.005 22 12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <!-- Twitter Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.954 4.569c-.885.392-1.83.654-2.825.775 1.014-.608 1.794-1.574 2.163-2.724-.949.564-2.005.974-3.127 1.195-.896-.954-2.173-1.55-3.591-1.55-2.717 0-4.924 2.206-4.924 4.924 0 .39.044.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.708.869 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.376 4.6 3.415-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.188 1.397 4.768 2.213 7.557 2.213 9.054 0 14-7.496 14-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <!-- Instagram Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.75 2h8.5C19.216 2 22 4.784 22 8.25v7.5C22 19.216 19.216 22 16.25 22h-8.5C4.784 22 2 19.216 2 15.75v-7.5C2 4.784 4.784 2 7.75 2zM12 7.25a4.75 4.75 0 100 9.5 4.75 4.75 0 000-9.5zm6.25-1a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 110 6 3 3 0 010-6z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
