@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My School</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-gray-800">My School</a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-gray-800 hover:text-blue-500">Home</a>
+        <a href="#" class="text-gray-800 hover:text-blue-500">About Us</a>
+        <a href="#" class="text-gray-800 hover:text-blue-500">Admissions</a>
+        <a href="#" class="text-gray-800 hover:text-blue-500">Contact</a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 8h16M4 16h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 right-0 bg-white shadow">
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About Us</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Admissions</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a>
+    </div>
+  </nav>
+
+  <!-- JavaScript to Toggle Mobile Menu and Close on Click Outside -->
+  <script>
+    // Select the button and menu elements
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    // Function to toggle the menu
+    function toggleMenu() {
+      menu.classList.toggle('hidden');
+    }
+
+    // Add click event listener to the button
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent event bubbling
+      toggleMenu();
+    });
+
+    // Add click event listener to the document
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!menu.contains(target) && !btn.contains(target)) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    // Prevent clicks inside the menu from closing it
+    menu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+  <!-- Hero Section with Updated Background Image -->
+  <section class="bg-cover bg-center h-screen" style="background-image: url('/happy.webp');">
+    <div class="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
+      <div class="text-center">
+        <h1 class="text-white text-5xl font-bold">Welcome to My School</h1>
+        <p class="text-gray-300 mt-4">Empowering students to become lifelong learners.</p>
+        <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-500">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800">About Us</h2>
+      <p class="mt-4 text-gray-600 text-center">
+        My School is dedicated to providing the best education for our students. Our mission is to foster a community of learners who are prepared to thrive in a global society.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800">
+    <div class="container mx-auto px-6 py-4">
+      <div class="text-center text-gray-300">
+        &copy; 2023 My School. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
